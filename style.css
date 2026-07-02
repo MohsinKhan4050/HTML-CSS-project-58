@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.rating {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin: 0 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.message {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: gold;
+    font-weight: bold;
+}
+
+.rating input:checked~label {
+    color: gold;
+}
+
+
+#rate1:checked~.message::before {
+    content: "😡 I hate it";
+}
+
+#rate2:checked~.message::before {
+    content: "😕 Not Good";
+}
+
+#rate3:checked~.message::before {
+    content: "🙂 It's Okay";
+}
+
+#rate4:checked~.message::before {
+    content: "😊 I Like It";
+}
+
+#rate5:checked~.message::before {
+    content: "😍 I Love It";
+}
